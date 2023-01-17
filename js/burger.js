@@ -1,19 +1,21 @@
-const humb = document.querySelector('.burger__menu');
-const popup = document.querySelector('.header__nav');
-const menuLink = document.querySelector('.header__item')
+const burger = document.getElementById('burger__menu');
+const nav = document.getElementById('header__nav');
 
-humb.addEventListener('click', humbHandler);
-
-function humbHandler(e) {
-    e.preventDefault();
-    humb.classList.toggle('active');
-    popup.classList.toggle('active');
+document.onclick = function (l) {
+    if (l.target.id == 'header__link') {
+        burger.classList.remove('active');
+        nav.classList.remove('active');
+    }
 }
 
-menuLink.addEventListener('click', menuLinkHandler);
+document.onclick = function (c) {
+    if (c.target.id != 'header__nav' && c.target.id != 'burger__menu') {
+        burger.classList.remove('active');
+        nav.classList.remove('active');
+    }
+}
 
-function menuLinkHandler(l) {
-    l.preventDefault();
-    humb.classList.toggle('active');
-    popup.classList.toggle('active');
+burger.onclick = function () {
+    burger.classList.toggle('active');
+    nav.classList.toggle('active');
 }
