@@ -152,10 +152,13 @@ html {
 
 @media (min-width: 320px) and (max-width: 669px) {
   .header__list {
+    box-sizing: border-box;
     visibility: hidden;
     max-width: 100%;
     top: 96px;
     justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   .header__list {
@@ -204,6 +207,10 @@ html {
   width: 40px;
   height: 24px;
   position: relative;
+}
+
+.burger__menu:hover, .burger__menu:active {
+  cursor: pointer;
 }
 
 .burger__menu-line,
