@@ -55,6 +55,8 @@ html {
 @media (min-width: 320px) and (max-width: 669px) {
   .header {
   width: 100%;
+  position: relative;
+  z-index: 4;
   }
 }
 
@@ -85,7 +87,6 @@ html {
     max-width: 330px;
     margin: 0 auto;
     padding: 36px 0;
-    z-index: 4;
   }
 }
 
@@ -128,9 +129,10 @@ html {
     top: 95px;
     left: 0;
     right: 0;
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
     transition: all 0.3s;
+    z-index: -1;
   }
 
   .header__nav.hide {
@@ -216,10 +218,12 @@ html {
 
 .burger__menu-line {
   top: -2px;
+  transition: all 0.1s;
 }
 
 .burger__menu-line::after {
   bottom: -24px;
+  transition: all 0.1s;
 }
 
 
@@ -234,6 +238,7 @@ html {
 
 .burger__menu::before {
   top: 5px;
+  transition: all 0.3s;
 }
 
 .burger__menu.active::before {
@@ -244,6 +249,7 @@ html {
 
 .burger__menu::after {
   bottom: 8px;
+  transition: all 0.3s;
 }
 
 .burger__menu.active::after {
