@@ -909,6 +909,7 @@ html, body {
   position: relative;
   width: 250px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   background: var(--bg-color);
@@ -916,9 +917,16 @@ html, body {
   border-radius: 20px;
   margin-bottom: 32px;
   cursor: pointer;
+  transition: all 0.5s;
 }
 
-.accordion__item-active {
+.accordion__item-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.item-active {
   position: relative;
   width: 250px;
   display: flex;
@@ -929,6 +937,7 @@ html, body {
   border-radius: 20px;
   margin-bottom: 32px;
   cursor: pointer;
+  transition: all 0.5s;
 }
 
 @media (min-width: 320px) and (max-width: 669px) {
@@ -987,6 +996,61 @@ html, body {
   background: url(../img/accordion_btn-active.svg);
 }
 
+/* ==== ACCORDING ANIMATION ====*/
+.accordion__item-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  transition: all 0.5s;
+}
+
+.accordion__item-text {
+  position: relative;
+  width: 169px;
+  font-family: 'Inter';
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 10px;
+  margin-bottom: 6px;
+}
+
+.accordion__item-text::before {
+  position: absolute;
+  content: '';
+  width: 164px;
+  border: 1px solid #aea1a1;
+  top: -6px;
+}
+
+.accordion__item-price {
+  font-family: 'Inter';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+
+.orange-price {
+  font-weight: 700;
+  font-style: normal;
+  color: var(--secondary-color);
+}
+
+.accordion__item-button {
+  width: 86px;
+  height: 25px;
+  background: #fff;
+  border-radius: 10px;
+  border: 0;
+  margin-bottom: 12px;
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--heading-color);
+}
+
+/* ==== ACCORDING ANIMATION ====*/
 
 .call-us__text-wrapper {
   display: flex;
