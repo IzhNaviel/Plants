@@ -23,13 +23,13 @@ burger.onclick = function () {
 
 let serviceButton = document.querySelector('.service__buttons-wrapper');
 
-document.querySelector('.service__button').addEventListener ('click', (e) => {
+/*document.querySelector('.service__button').addEventListener ('click', (e) => {
     if (e.target.innerText === 'Gardens') {
         console.log ('Gardens')
     } else if (e.target.innerText === 'Lawnn') {
         console.log ('Lawnn')
     } else {console.log ('Planting')}
-})
+})*/
 
 
 
@@ -42,9 +42,10 @@ document.querySelector('.service__button').addEventListener ('click', (e) => {
 let priceButton = document.querySelector('.accordion__item');
 let textWrapper = document.querySelector('.accordion__item-text-wrapper');
 
-priceButton.addEventListener('click', () => {    
-    priceButton.classList.toggle ('item-active');
-    textWrapper.classList.toggle ('accordion__item-text-wrapper-active');
+priceButton.addEventListener('click', (z) => {    
+    priceButton.classList.add ('item-active');
+    textWrapper.classList.add ('accordion__item-text-wrapper-active');
+});
 
 
-})
+
