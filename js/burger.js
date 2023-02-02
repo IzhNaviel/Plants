@@ -38,3 +38,13 @@ document.querySelector('.service__button').addEventListener ('click', (e) => {
 //serviceItem.forEach(item => {
 
 //})
+
+let priceButton = document.querySelector('.accordion__item');
+let textWrapper = document.querySelector('.accordion__item-text-wrapper');
+
+priceButton.addEventListener('click', () => {    
+    priceButton.classList.toggle ('item-active');
+    textWrapper.classList.toggle ('accordion__item-text-wrapper-active');
+
+
+})
