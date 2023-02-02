@@ -19,3 +19,22 @@ burger.onclick = function () {
     burger.classList.toggle('active');
     nav.classList.toggle('active');
 }
+
+
+let serviceButton = document.querySelector('.service__buttons-wrapper');
+
+document.querySelector('.service__button').addEventListener ('click', (e) => {
+    if (e.target.innerText === 'Gardens') {
+        console.log ('Gardens')
+    } else if (e.target.innerText === 'Lawnn') {
+        console.log ('Lawnn')
+    } else {console.log ('Planting')}
+})
+
+
+
+//let serviceItem = document.querySelectorAll ('.service__item');
+
+//serviceItem.forEach(item => {
+
+//})

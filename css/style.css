@@ -811,6 +811,13 @@ html, body {
     padding-bottom: 21px;
   }
 }
+
+/* ==== SERVICE BLUR ====*/
+.blur {
+  filter: blur(2px);
+}
+/* ==== SERVICE BLUR END====*/
+
 /* ==== SERVICE END ====*/
 
 /* ==== PRICES START ====*/
@@ -899,11 +906,25 @@ html, body {
 }
 
 .accordion__item {
+  position: relative;
   width: 250px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   background: var(--bg-color);
+  border: 0px;
+  border-radius: 20px;
+  margin-bottom: 32px;
+  cursor: pointer;
+}
+
+.accordion__item-active {
+  position: relative;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #d6e7d2;
   border: 0px;
   border-radius: 20px;
   margin-bottom: 32px;
@@ -940,6 +961,8 @@ html, body {
   text-align: start;
 }
 
+
+
 @media (min-width: 320px) and (max-width: 669px) {
   .accordion-btn-title {
     width: 89px;
@@ -953,8 +976,17 @@ html, body {
 }
 
 .accordion-btn-img {
-  margin-right: 40px;
+  width: 16px;
+  height: 16px;
+  background: url(../img/accordion_btn.svg);
 }
+
+.accordion-btn-img-active {
+  width: 16px;
+  height: 16px;
+  background: url(../img/accordion_btn-active.svg);
+}
+
 
 .call-us__text-wrapper {
   display: flex;
