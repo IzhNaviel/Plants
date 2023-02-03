@@ -39,12 +39,25 @@ let serviceButton = document.querySelector('.service__buttons-wrapper');
 
 //})
 
-let priceButton = document.querySelector ('.accordion__item');
-let textWrapper = document.querySelector ('.accordion__item-text-wrapper');
-console.log(priceButton);
+let priceButton = document.querySelectorAll ('.accordion__item');
+let textWrapper = document.querySelectorAll ('.accordion__item-text-wrapper');
+
+priceButton.forEach(item => {
+    console.log(item);
+    let btnEv = item.querySelector('.accordion-btn-title');
+    
+    btnEv.addEventListener('click', function (z) {
+            console.log(z.target.classList == 'accordion-btn-title');
+            console.log(item.querySelector('.accordion__item'))
+        });
+})
+
+/*console.log(priceButton);
 console.log(textWrapper);
 
-priceButton.addEventListener('click', (z) => { 
+priceButton.addEventListener('click', (z) => 
+
+{ 
 
         if (z.target.classList == 'accordion-btn-title') {
             priceButton.classList.toggle ('item-active');
@@ -52,7 +65,7 @@ priceButton.addEventListener('click', (z) => {
         };
 
 
-});
+});*/
 
 
 
