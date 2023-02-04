@@ -890,7 +890,6 @@ html, body {
 
 @media (min-width: 320px) and (max-width: 669px) {
   .prices__accordion-wrapper {
-    height: 235px;
     margin-bottom: 19px;
   }
 }
@@ -942,15 +941,18 @@ html, body {
 @media (min-width: 320px) and (max-width: 669px) {
   .accordion__item {
     width: 180px;
-    height: 49px;
     margin-bottom: 13.92px;
   }
 }
 
-.accordion__item:hover, .accordion__item:focus, .accordion__item:active {
+.accordion__item:hover, .accordion__item:focus {
   background: #d6e7d2;
   transition: .2s;
 } 
+
+.accordion__item:active {
+  background: #d6e7d2;
+}
 
 .accordion__item:last-child {
   margin-bottom: 0;
@@ -967,6 +969,7 @@ html, body {
   font-size: 20px;
   line-height: 20px;
   text-align: start;
+  cursor: pointer;
 }
 
 
@@ -999,13 +1002,13 @@ html, body {
 
 .accordion__item-text-wrapper {
   display: none;
+  background: #d6e7d2;
   transition: all 1s;
 }
 
 .accordion__item-text-wrapper-active {
   display: flex;
   flex-direction: column;
-  margin-left: 40px;
   transition: all 1s;
 }
 

@@ -39,33 +39,16 @@ let serviceButton = document.querySelector('.service__buttons-wrapper');
 
 //})
 
-let priceButton = document.querySelectorAll ('.accordion__item');
-let textWrapper = document.querySelectorAll ('.accordion__item-text-wrapper');
+const accBtn = document.querySelectorAll ('.accordion__item');
+const itWrap = document.querySelectorAll ('.accordion__item-wrapper');
+const textWrap = document.querySelectorAll ('.accordion__item-text-wrapper');
 
-priceButton.forEach(item => {
-    console.log(item);
-    let btnEv = item.querySelector('.accordion-btn-title');
-    
-    btnEv.addEventListener('click', function (z) {
-            console.log(z.target.classList == 'accordion-btn-title');
-            console.log(item.querySelector('.accordion__item'))
-        });
-})
-
-/*console.log(priceButton);
-console.log(textWrapper);
-
-priceButton.addEventListener('click', (z) => 
-
-{ 
-
-        if (z.target.classList == 'accordion-btn-title') {
-            priceButton.classList.toggle ('item-active');
-            textWrapper.classList.toggle ('accordion__item-text-wrapper-active');
-        };
-
-
-});*/
-
-
+ for ( let i = 0; i<accBtn.length; i++) {
+    accBtn[i].addEventListener ('click', (e) => { 
+        if (e.target.classList == 'accordion-btn-title') {
+            accBtn[i].classList.toggle ('item-active');
+            textWrap[i].classList.toggle ('accordion__item-text-wrapper-active');
+        }            
+    }); 
+ }
 
