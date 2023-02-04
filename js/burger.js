@@ -20,35 +20,43 @@ burger.onclick = function () {
     nav.classList.toggle('active');
 }
 
+// ==Service START== //
 
-let serviceButton = document.querySelector('.service__buttons-wrapper');
-
-/*document.querySelector('.service__button').addEventListener ('click', (e) => {
-    if (e.target.innerText === 'Gardens') {
-        console.log ('Gardens')
-    } else if (e.target.innerText === 'Lawnn') {
-        console.log ('Lawnn')
-    } else {console.log ('Planting')}
-})*/
+const serviceButton = document.querySelectorAll ('.service__button');
+const sItemTitle = document.querySelectorAll ('.service__item-title');
+const sItem = document.querySelectorAll ('.service__item')
 
 
+    for ( let z = 0; z<sItemTitle.length; z++) {
+        //console.log (sItemTitle[z].innerHTML.split(','))  
+    }; 
 
-//let serviceItem = document.querySelectorAll ('.service__item');
 
-//serviceItem.forEach(item => {
+for ( let i =0 ; i< serviceButton.length ; i++) {
+    serviceButton[i].addEventListener ('click', (sB) => {
+        if (serviceButton[i].innerHTML === "Gardens") {
+            sItemTitleSearch ()
+        };
+    })
 
-//})
+};
+
+// ==Service END== //
+
+// ==Prices Start== //
 
 const accBtn = document.querySelectorAll ('.accordion__item');
 const itWrap = document.querySelectorAll ('.accordion__item-wrapper');
 const textWrap = document.querySelectorAll ('.accordion__item-text-wrapper');
+let count = 0;
 
  for ( let i = 0; i<accBtn.length; i++) {
     accBtn[i].addEventListener ('click', (e) => { 
         if (e.target.classList == 'accordion-btn-title') {
-            accBtn[i].classList.toggle ('item-active');
-            textWrap[i].classList.toggle ('accordion__item-text-wrapper-active');
-        }            
+                accBtn[i].classList.toggle ('item-active');
+                textWrap[i].classList.toggle ('accordion__item-text-wrapper-active');           
+            } 
     }); 
  }
 
+// ==Prices END== //

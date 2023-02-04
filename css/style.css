@@ -18,6 +18,10 @@
   list-style: none;
 }
 
+a:visited {
+  color: inherit;
+}
+
 nav, header, section {
   border: 0;
 }
@@ -1378,7 +1382,7 @@ html, body {
     margin-right: 13px;
   }
   
-  .footer-link:hover, .footer-link:focus, .footer-link:active {
+  .footer-link:hover, .footer-link:focus, .footer-link:active, .footer-link:visited {
     color: var(--secondary-color);
     font-weight: 400;
     transition: .2s;
