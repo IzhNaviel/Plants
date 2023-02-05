@@ -24,19 +24,19 @@
             <nav class="header__nav" id="header__nav">
                 <ul class="header__list">
                     <li class="header__item">
-                        <a href="#home" class="header__link" id="header__link">Home</a>
+                        <a href="#home" class="header__link" id="header__link_home">Home</a>
                     </li>
                     <li class="header__item">
-                        <a href="#about-us" class="header__link" id="header__link">About us</a>
+                        <a href="#about-us" class="header__link" id="header__link_about">About us</a>
                     </li> 
                     <li class="header__item">
-                        <a href="#service" class="header__link" id="header__link">Service</a>
+                        <a href="#service" class="header__link" id="header__link_service">Service</a>
                     </li>
                     <li class="header__item">
-                        <a href="#price" class="header__link" id="header__link">Price</a>
+                        <a href="#price" class="header__link" id="header__link_price">Price</a>
                     </li>
                     <li class="header__item">
-                        <a href="#contacts" class="header__link" id="header__link">Contacts</a>
+                        <a href="#contacts" class="header__link" id="header__link_contacts">Contacts</a>
                     </li>
                 </ul>
             </nav>            
@@ -48,7 +48,7 @@
                 <div class="welcome__wrapper">                    
                     <img src="img/leafs.png" alt="We grow plants and give you oxygen" class="welcome__img">
                     <div class="welcome__text">
-                    <h1 class="welcome__title">We grow <span class="title-green">plants</span> and give you oxygen</h1>
+                    <h1 class="welcome__title">We grow <span class="title-green">plants</span> and give you oxygen!</h1>
                     <p class="welcome__desc">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                     </p>
@@ -81,15 +81,9 @@
                         Service and our projects
                     </h2>               
                     <div class="service__buttons-wrapper">
-                        <button class="service__button">
-                            Gardens
-                        </button>
-                        <button class="service__button">
-                            Lawn
-                        </button>
-                        <button class="service__button">
-                            Planting 
-                        </button>
+                        <button class="service__button">Gardens</button>
+                        <button class="service__button">Lawn</button>
+                        <button class="service__button">Planting</button>
                     </div>
                 </div>
                 <div class="service__wrapper">
@@ -146,16 +140,49 @@
                         <div class="prices__accordion-wrapper">
                             <div class="prices__accordion">
                                 <div class="accordion__item">
-                                    <span class="accordion-btn-title">Basics</span>
-                                    <img src="img/accordion_btn.svg" alt="Accordion button img" class="accordion-btn-img">
-                                </div>
+                                    <div class="accordion__item-wrapper">
+                                        <span class="accordion-btn-title">Basics</span>
+                                    <span class="accordion-btn-img"></span>
+                                    </div>                                    
+                                <div class="accordion__item-text-wrapper">
+                                    <div class="accordion__item-text">
+                                        Release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                                    </div>
+                                    <div class="accordion__item-price">
+                                        <span class="orange-price">$15</span> / per hour
+                                    </div>
+                                    <button class="accordion__item-button"><a href="#contacts" class="accordion__item-link">Order</a></button>
+                                </div>                            
+                                </div>                    
                                 <div class="accordion__item">
-                                    <span class="accordion-btn-title">Standard</span>
-                                    <img src="img/accordion_btn.svg" alt="Accordion button img" class="accordion-btn-img">
+                                    <div class="accordion__item-wrapper">
+                                        <span class="accordion-btn-title">Standard</span>
+                                    <span class="accordion-btn-img"></span>
+                                    </div>                                    
+                                <div class="accordion__item-text-wrapper">
+                                    <div class="accordion__item-text">
+                                        Release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                                    </div>
+                                    <div class="accordion__item-price">
+                                        <span class="orange-price">$25</span> / per hour
+                                    </div>
+                                    <button class="accordion__item-button"><a href="#contacts" class="accordion__item-link">Order</a></button></button>
+                                </div>                                           
                                 </div>   
                                 <div class="accordion__item">
-                                    <span class="accordion-btn-title">Pro care</span>
-                                    <img src="img/accordion_btn.svg" alt="Accordion button img" class="accordion-btn-img">
+                                    <div class="accordion__item-wrapper">
+                                        <span class="accordion-btn-title">Pro care</span>
+                                    <span class="accordion-btn-img"></span>
+                                    </div>                                    
+                                <div class="accordion__item-text-wrapper">
+                                    <div class="accordion__item-text">
+                                        Release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                                    </div>
+                                    <div class="accordion__item-price">
+                                        <span class="orange-price">$35</span> / per hour
+                                    </div>
+                                    <button class="accordion__item-button"><a href="#contacts" class="accordion__item-link">Order</a></button></button>
+                                </div>               
                                 </div>                                       
                             </div>
                         </div>
@@ -174,11 +201,51 @@
             <div class="wrapper">
                 <div class="contacts__wrapper">
                     <img src="img/contact_woman_1.png" alt="contacts" class="contacts__img">
-                    <h2 class="contacts__title">Contact us</h2>
-                    <div class="contacts__accordion-button">
-                    <span class="contacts__accordion-btn-title">City</span>
-                    <span class="contacts__accordion-btn-img"></span>
+                    <h2 class="contacts__title">Contact us</h2>                    
+                    <div class="contacts__accordion-button-wrapper">
+                        <div class="contacts__accordion-button">
+                        <span class="contacts__accordion-btn-title">City</span>
+                        <span class="contacts__accordion-btn-img"></span>
+                    </div>                    
+                    <div class="contacts__accordion-cities-wrapper">
+                        <div class="cities" id="canand">Canandaigua, NY </div>
+                        <div class="cities" id="ny">New York City </div>
+                        <div class="cities" id="yonk">Yonkers, NY </div>
+                        <div class="cities" id="sher">Sherrill, NY </div>
+                    </div>   
+                    <div class="city__card" id="yonkers">
+                        <div class="city__text">
+                            <div class="city_info-wrapper"><p class="city_info-text-bold">City:</p> <p class="city_info">Yonkers, NY</p></div>
+                            <div class="city_info-wrapper"><span class="text-bold">Phone:</span> <p class="city_info">+1	914	678 0003</p></div>
+                            <div class="city_info-wrapper"><span class="text-bold">Office adress:</span> <p class="city_info">511 Warburton Ave</p></div>
+                            <button class="city_call-us"><a href="tel:+19146780003" class="accordion__item-link">Call us</a></button>
+                        </div>
                     </div>
+                    <div class="city__card" id="canandaigua">
+                        <div class="city__text">
+                            <div class="city_info-wrapper"><span class="text-bold">City:</span> <p class="city_info">Canandaigua, NY</p></div>
+                            <div class="city_info-wrapper"><span class="text-bold">Phone:</span> <p class="city_info">+1	585	393 0001</p></div>
+                            <div class="city_info-wrapper"><span class="text-bold">Office adress:</span> <p class="city_info">151 Charlotte Street</p></div>
+                            <button class="city_call-us"><a href="tel:+15853930001" class="accordion__item-link">Call us</a></button>
+                        </div>
+                    </div>
+                    <div class="city__card" id="sherrill">
+                        <div class="city__text">
+                            <div class="city_info-wrapper"><span class="text-bold">City:</span> <p class="city_info">Sherrill, NY</p></div>
+                            <div class="city_info-wrapper"><span class="text-bold">Phone:</span> <p class="city_info">+1	315	908 0004</p></div>
+                            <div class="city_info-wrapper"><span class="text-bold">Office adress:</span> <p class="city_info">14 WEST Noyes BLVD</p></div>
+                            <button class="city_call-us"><a href="tel:+13159080004" class="accordion__item-link">Call us</a></button>
+                        </div>
+                    </div>
+        
+                    <div class="city__card" id="nyc">
+                        <div class="city__text">
+                            <div class="city_info-wrapper"><span class="text-bold">City:</span> <p class="city_info">New York City</p></div>
+                            <div class="city_info-wrapper"><span class="text-bold">Phone:</span> <p class="city_info">+1	212	456 0002</p></div>
+                            <div class="city_info-wrapper"><span class="text-bold">Office adress:</span><p class="city_info">9 East 91st Street</p></div>
+                            <button class="city_call-us"><a href="tel:+12124560002" class="accordion__item-link">Call us</a></button>
+                        </div>
+                    </div>                       
                 </div>   
             </div>
         </section>
