@@ -1064,7 +1064,12 @@ html, body {
 
 .accordion__item-link {
   text-decoration: none;
+  color: var(--heading-color);
 }
+
+.accordion__item-link:visited {
+  color: inherit;
+} 
 
 /* ==== ACCORDING ANIMATION ====*/
 
@@ -1267,7 +1272,7 @@ html, body {
 @media (min-width: 670px) and (max-width: 1221px) {
   .contacts__accordion-button {
     margin-top: 0px;
-    margin-bottom: 250px;
+
   }
 }
 
@@ -1275,7 +1280,7 @@ html, body {
   .contacts__accordion-button {
     width: 300px;
     margin-top: 0px;
-    margin-bottom: 132px;
+    margin: 0 auto;
   }
 }
 
@@ -1316,11 +1321,29 @@ html, body {
 
 .contacts__accordion-cities-wrapper {
   width: 450px;
-  display: flex;
+  display: none;
   flex-direction: column;
   background: #dce9d9;
   border: 0;
   border-radius: 0px;
+}
+
+.cities-wrapper-active {
+  display: flex;
+}
+
+@media (min-width: 670px) and (max-width: 1221px) {
+  .contacts__accordion-cities-wrapper {
+    margin-top: 0px;
+
+  }
+}
+
+@media (min-width: 320px) and (max-width: 669px) {
+  .contacts__accordion-cities-wrapper {
+    width: 300px;
+    margin: 0 auto;
+  }
 }
 
 .cities {
@@ -1342,7 +1365,13 @@ html, body {
   width: 380px;
   border: 1px solid #d9d9d9;
   transform: translatey(-50%);
+}
 
+@media (min-width: 320px) and (max-width: 669px) {
+  .cities::after {
+    width: 250px;
+    margin: 0 auto;
+  }
 }
 
 .cities:hover {
@@ -1359,6 +1388,103 @@ html, body {
 .cities:last-child {
   margin-bottom: 31px;
 }
+
+.city__card {
+  display: none;
+  width: 448px;
+  margin-top: 47px;
+  border: 1px solid #000;
+  border-radius: 15px;
+}
+
+@media (min-width: 670px) and (max-width: 1221px) {
+  .city__card {
+    width: 448px;
+    height: 214px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 669px) {
+  .city__card {
+    width: 282px;
+  }
+}
+
+.city__card-active {
+  display: block;
+}
+
+.city__text {
+  margin-left: 35px;
+  margin-right: 76px;
+  margin-bottom: 32px;
+  margin-top: 17px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.city_info-wrapper {
+  width: 322px;
+  height: 40px;
+  padding-top: 17px;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 670px) and (max-width: 1221px) {
+  .city_info-wrapper {
+    width: 337px;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 669px) {
+  .city_info-wrapper {
+    width: 208px;
+  }
+}
+
+.city_info {
+  width: 204px;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: 5%;
+  color: var(--heading-color);
+}
+
+@media (min-width: 320px) and (max-width: 669px) {
+  .city_info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 144px;
+    line-height: 20px;
+  }
+}
+
+.city_info-text-bold {
+ color: #000;
+}
+
+.city_call-us {
+  width: 122px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  background: var(--bg-color);
+  color: var(--secondary-color);
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 13px;
+  padding: 7px 29px;
+  margin-top: 24px;
+}
+
+
+
 /* ==== CONTACTS END ====*/
 
 /* ==== MAIN END ====*/

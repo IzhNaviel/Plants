@@ -56,7 +56,36 @@ let count = 0;
                 accBtn[i].classList.toggle ('item-active');
                 textWrap[i].classList.toggle ('accordion__item-text-wrapper-active');           
             } 
-    }); 
+    });
  }
 
 // ==Prices END== //
+
+// ==CONTACTS Start== //
+
+const btnCity = document.querySelector ('.contacts__accordion-button');
+const selectBtn = document.querySelector ('.contacts__accordion-cities-wrapper');
+const citiList = document.querySelectorAll ('.cities');
+const cardEl = document.querySelectorAll ('.city__card');
+
+console.log(cardEl);
+
+btnCity.addEventListener ('click', (clk) => {
+
+    if (clk.target.classList == 'contacts__accordion-btn-title') {
+        selectBtn.classList.toggle ('cities-wrapper-active');
+        //citiesHandler();
+    };    
+
+    for (let k = 0; k< citiList.length; k++) {
+        
+            citiList[k].addEventListener ('click', (b) => {
+            if (b.target.id == '#canand') {
+                selectBtn.classList.remove ('cities-wrapper-active');
+                
+            }
+    });
+    }
+});
+
+// ==CONTACTS END== //
