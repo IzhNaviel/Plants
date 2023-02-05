@@ -22,7 +22,7 @@ burger.onclick = function () {
 
 // ==Service START== //
 
-const serviceButton = document.querySelectorAll ('.service__button');
+/*const serviceButton = document.querySelectorAll ('.service__button');
 const sItemTitle = document.querySelectorAll ('.service__item-title');
 const sItem = document.querySelectorAll ('.service__item')
 
@@ -39,7 +39,7 @@ for ( let i =0 ; i< serviceButton.length ; i++) {
         };
     })
 
-};
+};*/
 
 // ==Service END== //
 
@@ -68,24 +68,37 @@ const selectBtn = document.querySelector ('.contacts__accordion-cities-wrapper')
 const citiList = document.querySelectorAll ('.cities');
 const cardEl = document.querySelectorAll ('.city__card');
 
-console.log(cardEl);
 
 btnCity.addEventListener ('click', (clk) => {
 
     if (clk.target.classList == 'contacts__accordion-btn-title') {
         selectBtn.classList.toggle ('cities-wrapper-active');
-        //citiesHandler();
     };    
 
-    for (let k = 0; k< citiList.length; k++) {
-        
-            citiList[k].addEventListener ('click', (b) => {
-            if (b.target.id == '#canand') {
-                selectBtn.classList.remove ('cities-wrapper-active');
-                
-            }
-    });
+    for (let m = 0; m<cardEl.length; m++) {
+        cardEl[m].classList.remove ('city__card-active');
+
+        document.querySelector('#canand').addEventListener ('click', () => {
+            selectBtn.classList.remove ('cities-wrapper-active');
+            document.querySelector('#canandaigua').classList.add ('city__card-active');
+        });
+
+        document.querySelector('#ny').addEventListener ('click', () => {
+            selectBtn.classList.remove ('cities-wrapper-active');
+            document.querySelector('#nyc').classList.add ('city__card-active');
+        });
+
+        document.querySelector('#yonk').addEventListener ('click', () => {
+            selectBtn.classList.remove ('cities-wrapper-active');
+            document.querySelector('#yonkers').classList.add ('city__card-active');
+        });
+
+        document.querySelector('#sher').addEventListener ('click', () => {
+            selectBtn.classList.remove ('cities-wrapper-active');
+            document.querySelector('#sherrill').classList.add ('city__card-active');
+        });
     }
+
 });
 
 // ==CONTACTS END== //
